@@ -93,7 +93,7 @@ const ext = process.argv[3];
 var filteredList = require('./get-filtered-list');
 
 filteredList(dir, ext, function(err, list){
-  if (err) return console.log(err);
+  if (err) return console.error('There was an error:', err);
   list.forEach(file => console.log(file));
 });
 
